@@ -1,0 +1,95 @@
+{
+  "methods": [
+    {
+      "name": "Single-agent",
+      "acc": 0.7592592592592593,
+      "f1": 0.7585449553877831,
+      "cit_valid": 1.0
+    },
+    {
+      "name": "Self-consistency",
+      "acc": 0.7592592592592593,
+      "f1": 0.7585449553877831,
+      "cit_valid": 1.0
+    },
+    {
+      "name": "Debate (no lock) + vote",
+      "acc": 0.4444444444444444,
+      "f1": 0.3402445507708665,
+      "cit_valid": 0.9259259259259259
+    },
+    {
+      "name": "Proposed (debate+auditor+judge)",
+      "acc": 0.7222222222222222,
+      "f1": 0.7209523809523809,
+      "cit_valid": 1.0
+    }
+  ],
+  "robustness": [
+    {
+      "setting": "Clean retrieval",
+      "acc": 0.7222222222222222,
+      "f1": 0.7209523809523809
+    },
+    {
+      "setting": "Noisy retrieval (p=0.4)",
+      "acc": 0.6111111111111112,
+      "f1": 0.6242410845859122
+    },
+    {
+      "setting": "Adversarial agent",
+      "acc": 0.7407407407407407,
+      "f1": 0.7387535659425061
+    }
+  ],
+  "noise_curve": {
+    "p": [
+      0.0,
+      0.2,
+      0.4,
+      0.6
+    ],
+    "acc": [
+      0.7222222222222222,
+      0.5925925925925926,
+      0.6111111111111112,
+      0.5740740740740741
+    ],
+    "f1": [
+      0.7209523809523809,
+      0.6043219299033252,
+      0.6242410845859122,
+      0.5501562944018187
+    ]
+  },
+  "demo": {
+    "claim": "Jupiter is not the largest planet in the Solar System.",
+    "gold": "REFUTED",
+    "agents": [
+      {
+        "agent": "Prover",
+        "label": "NOT_ENOUGH_INFO",
+        "evidence_ids": []
+      },
+      {
+        "agent": "Disprover",
+        "label": "REFUTED",
+        "evidence_ids": [
+          19
+        ]
+      },
+      {
+        "agent": "NEI",
+        "label": "NOT_ENOUGH_INFO",
+        "evidence_ids": []
+      }
+    ],
+    "final": {
+      "label": "REFUTED",
+      "evidence_ids": [
+        19
+      ]
+    },
+    "evidence_sentence": "Jupiter is the largest planet in the Solar System."
+  }
+}

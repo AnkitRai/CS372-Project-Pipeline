@@ -1,0 +1,86 @@
+{
+  "claim": "Jupiter is not the largest planet in the Solar System.",
+  "gold": "REFUTED",
+  "retrieved": [
+    {
+      "id": 19,
+      "text": "Jupiter is the largest planet in the Solar System.",
+      "sim": 1.0000000000000002
+    },
+    {
+      "id": 21,
+      "text": "Mercury is the closest planet to the Sun.",
+      "sim": 0.22245849198834208
+    },
+    {
+      "id": 6,
+      "text": "The Amazon is the largest river by discharge.",
+      "sim": 0.16941986995570785
+    },
+    {
+      "id": 29,
+      "text": "The largest mammal is the blue whale.",
+      "sim": 0.16448310082738574
+    },
+    {
+      "id": 8,
+      "text": "The Pacific Ocean is the largest ocean.",
+      "sim": 0.13168315924324703
+    }
+  ],
+  "agents": [
+    {
+      "agent": "Prover",
+      "label": "NOT_ENOUGH_INFO",
+      "confidence": 0.8500000000000001,
+      "evidence_ids": []
+    },
+    {
+      "agent": "Disprover",
+      "label": "REFUTED",
+      "confidence": 0.95,
+      "evidence_ids": [
+        19
+      ]
+    },
+    {
+      "agent": "NEI",
+      "label": "NOT_ENOUGH_INFO",
+      "confidence": 0.65,
+      "evidence_ids": []
+    }
+  ],
+  "audits": [
+    {
+      "invalid_count": 0,
+      "flags": [],
+      "support_score": 0.0,
+      "contradiction_score": 0.0
+    },
+    {
+      "invalid_count": 0,
+      "flags": [],
+      "support_score": 0.6,
+      "contradiction_score": 0.9
+    },
+    {
+      "invalid_count": 0,
+      "flags": [],
+      "support_score": 0.0,
+      "contradiction_score": 0.0
+    }
+  ],
+  "final": {
+    "label": "REFUTED",
+    "confidence": 0.589,
+    "scores": {
+      "SUPPORTED": 0.0,
+      "REFUTED": 2.26,
+      "NOT_ENOUGH_INFO": 2.0
+    },
+    "conflict": 0.0,
+    "evidence_ids": [
+      19
+    ]
+  }
+}
